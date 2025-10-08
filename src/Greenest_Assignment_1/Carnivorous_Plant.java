@@ -1,6 +1,6 @@
 package Greenest_Assignment_1;
 
-public class Carnivorous_Plant extends Plant{
+public class Carnivorous_Plant extends Plant {
 
     private final Liquid_Type liquid_Type = Liquid_Type.PROTEINDRINK;
 

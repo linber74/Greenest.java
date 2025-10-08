@@ -7,12 +7,13 @@ public abstract class Plant implements Fluid_requirements {
 
 
     public Plant(String plantName, int heightOfPlant) {
-        if (plantName == null || plantName.trim().isEmpty()) {
-            System.out.println("Försök igen!");
-        }
+//        if (plantName == null || plantName.trim().isEmpty()) {
+//            System.out.println("Försök igen!");
+//        }
         this.plantName = plantName;
         this.lengthMeter = heightOfPlant;
     }
+
 
     public String getPlantName() {
         return plantName;
@@ -30,12 +31,13 @@ public abstract class Plant implements Fluid_requirements {
         this.lengthMeter = heightOfPlant;
     }
 
+    @Override
     public double calculateLiquid(double literPerDay) {
         return literPerDay;
     }
 
+    @Override
     public String toString(){
-        return plantName + " behöver: " +
-                calculateLiquid(getHeightOfPlant()) + " l/dag";
+        return plantName;
     }
 }

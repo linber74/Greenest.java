@@ -1,6 +1,6 @@
 package Greenest_Assignment_1;
 
-public class Palm extends Plant {
+public class Palm extends Plant  {
 
     private final Liquid_Type liquid_Type = Liquid_Type.TAPWATER;
 
