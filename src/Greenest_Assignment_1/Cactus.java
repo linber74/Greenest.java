@@ -8,6 +8,8 @@ public class Cactus extends Plant{
         super(plantName, heightOfPlant);
     }
 
+
+
     public Liquid_Type getLiquid_Type() {
         return liquid_Type;
     }
@@ -16,5 +18,12 @@ public class Cactus extends Plant{
     public double calculateLiquid(double literPerDay) {
         literPerDay = 0.2;
         return literPerDay;
+    }
+
+    @Override
+    public String toString() {
+        return "Kaktusen " + getPlantName() +
+                " behöver: " + liquid_Type +
+                calculateLiquid(getHeightOfPlant()) + " l/dag";
     }
 }
