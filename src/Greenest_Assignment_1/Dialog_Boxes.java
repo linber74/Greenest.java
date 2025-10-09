@@ -3,7 +3,6 @@ package Greenest_Assignment_1;
 import Greenest_Assignment_1.Plant_Super_Sub.Plant;
 
 import javax.swing.*;
-
 import java.util.List;
 
 import static javax.swing.JOptionPane.showMessageDialog;
@@ -13,20 +12,27 @@ public class Dialog_Boxes {
     public static String userInput(List<Plant> plants) {
 
         while (true) {
-            String message = "";
-            String userInput = JOptionPane.showInputDialog(message);
-            if (userInput == null || userInput.isEmpty()) {
-                showMessageDialog(null, "Försök igen, får inte vara tomt!");
+
+            String input = JOptionPane.showInputDialog("Vilken växt ska vattnas?");
+
+            if (input == null ) {
+                showMessageDialog(null, "Programmet stängs");
+                return null;
             }
 
-            boolean plantFound = false;
+            if (input.isEmpty()){
+                showMessageDialog(null, "Får inte vara tomt, försök igen!");
+                continue;
+            }
+
             for (Plant plant : plants) {
-                if (plant.getPlantType().equals(userInput)) {
-                    plantFound = true;
-                    break;
+                String name = plant.getPlantName();
+                String plantType = plant.getPlantType();
+                if (name.equalsIgnoreCase(input) || (plantType + " " + name).equalsIgnoreCase(input)) {
+                    return name;
                 }
             }
-            showMessageDialog(null, "Namnet finns inte, försök igen!");
+            showMessageDialog(null, "Namnet finns inte på hotellet, försök igen!");
         }
     }
 

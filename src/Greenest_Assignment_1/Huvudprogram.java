@@ -15,10 +15,10 @@ public class Huvudprogram {
 
         List<Plant> plants = new ArrayList<>();
 
-        Cactus igge = new Cactus("Kaktus", "Igge", 0.20);
-        Palm laura = new Palm("Palm", "Laura", 5);
-        Carnivorous_Plant meatloaf = new Carnivorous_Plant("Köttätande växt", "Meatloaf", 0.7);
-        Palm olof =  new Palm("Palm", "Olof", 1);
+        Cactus igge = new Cactus("Kaktusen", "Igge", 0.20);
+        Palm laura = new Palm("Palmen", "Laura", 5);
+        Carnivorous_Plant meatloaf = new Carnivorous_Plant("Köttätande växten", "Meatloaf", 0.7);
+        Palm olof =  new Palm("Palmen", "Olof", 1);
 
 
         plants.add(igge);
@@ -27,6 +27,8 @@ public class Huvudprogram {
         plants.add(olof);
 
         String input = Dialog_Boxes.userInput(plants);
+
+
 
 
 

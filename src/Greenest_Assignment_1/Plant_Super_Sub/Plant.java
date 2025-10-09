@@ -4,15 +4,12 @@ import Greenest_Assignment_1.Fluid_requirements;
 
 public abstract class Plant implements Fluid_requirements {
 
-    private String plantType;
-    public static String plantName;
-    private double heightOfPlant;
+    private final String plantType;
+    public final String plantName;
+    private final double heightOfPlant;
 
 
     public Plant(String plantType, String plantName, double heightOfPlant) {
-//        if (plantName == null || plantName.trim().isEmpty()) {
-//            System.out.println("Försök igen!");
-//        }
         this.plantType = plantType;
         this.plantName = plantName;
         this.heightOfPlant = heightOfPlant;
@@ -26,17 +23,17 @@ public abstract class Plant implements Fluid_requirements {
         return plantName;
     }
 
-    public void setPlantName(String plantName) {
-        this.plantName = plantName;
-    }
+//    public void setPlantName(String plantName) {
+//        this.plantName = plantName;
+//    }
 
     public double getHeightOfPlant() {
         return heightOfPlant;
     }
 
-    public void setHeightOfPlant(int heightOfPlant) {
-        this.heightOfPlant = heightOfPlant;
-    }
+//    public void setHeightOfPlant(int heightOfPlant) {
+//        this.heightOfPlant = heightOfPlant;
+//    }
 
     @Override
     public double calculateLiquid(double literPerDay) {
