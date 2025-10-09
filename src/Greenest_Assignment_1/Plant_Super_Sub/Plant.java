@@ -5,7 +5,7 @@ import Greenest_Assignment_1.Fluid_requirements;
 public abstract class Plant implements Fluid_requirements {
 
     private final String plantType;
-    public final String plantName;
+    private final String plantName;
     private final double heightOfPlant;
 
 

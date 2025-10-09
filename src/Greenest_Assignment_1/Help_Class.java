@@ -24,14 +24,13 @@ public class Help_Class {
         showMessageDialog(null, message, TITLEERROR,JOptionPane.WARNING_MESSAGE);
     }
 
-
-    public static int continueOrNot() {
-        return JOptionPane.showConfirmDialog(
+    public static void continueOrNot() {
+        JOptionPane.showConfirmDialog(
                 null, "Vill du fortsätta till nästa växt?",
                 "Nästa?", JOptionPane.YES_NO_OPTION);
     }
 
-    public static String userInput(List<Plant> plants) {
+    public static void userInput(List<Plant> plants) {
 
         while (true) {
 
@@ -40,7 +39,7 @@ public class Help_Class {
 
             if (input == null ) {
                 messageOutput (PROGRAMCLOSE);
-                return null;
+                return;
             }
 
             if (input.isEmpty()){
@@ -53,7 +52,7 @@ public class Help_Class {
                 String plantType = plant.getPlantType();
                 if (name.equalsIgnoreCase(input) || (plantType + " " + name).equalsIgnoreCase(input)) {
                     messageOutput(plant.toString());
-                    return name;
+                    return;
                 }
             }
             messageOutput(NAMENOTHERE);
