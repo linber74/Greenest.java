@@ -2,20 +2,28 @@ package Greenest_Assignment_1.Plant_Super_Sub;
 
 import Greenest_Assignment_1.Liquid_Type;
 
+/**
+ * Subklass till Plant
+ */
+
 public class Palm extends Plant {
 
+    //inkapslad kan inte ändras
     private final Liquid_Type liquid_Type = Liquid_Type.TAPWATER;
 
+    //konsktruktor
     public Palm (String plantType, String plantName, double heightOfPlant) {
         super(plantType, plantName, heightOfPlant);
     }
-
+    //polymorfism, räknar ut hur mycket vätska
     @Override
     public double calculateLiquid(double literPerDay) {
         double liquidTap = 0.5;
         literPerDay = liquidTap * getHeightOfPlant();
        return literPerDay;
     }
+
+    //polymorfism
     @Override
     public String toString(){
         return "Palmen " + getPlantName() +

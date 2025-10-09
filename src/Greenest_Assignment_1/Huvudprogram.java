@@ -13,6 +13,7 @@ public class Huvudprogram {
 
     public static void main (String[] args) {
 
+        //Skapar lista som plantorna läggs in
         List<Plant> plants = new ArrayList<>();
 
         Cactus igge = new Cactus("Kaktusen", "Igge", 0.20);
@@ -25,8 +26,10 @@ public class Huvudprogram {
         plants.add(meatloaf);
         plants.add(olof);
 
+        //Kallar metoden userInput i Help_Class
         Help_Class.userInput(plants);
 
-        Help_Class.continueOrNot();
+        //Meddelar att program avslutas
+        Help_Class.messageClose();
     }
 }

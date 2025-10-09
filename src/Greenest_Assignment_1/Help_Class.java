@@ -1,36 +1,47 @@
 package Greenest_Assignment_1;
 
 import Greenest_Assignment_1.Plant_Super_Sub.Plant;
-
 import javax.swing.*;
 import java.util.List;
 
 import static javax.swing.JOptionPane.showMessageDialog;
 
+/**
+ * En hjälpklass där dialogrutorna finns
+ * I metoden userInput checkas det så att inte kraschar och
+ * rätt namn skrivits in
+ * Text och titlar i dialogrutor är inkapslade i variabler
+ */
+
 public class Help_Class {
 
-    public static final String WHICHPLANT = "Vilken växt ska vattnas?";
-    public static final String TITLEINPUT = "VÄXTHOTELLET";
-    public static final String PROGRAMCLOSE = "Programmet stängs";
-    public static final String EMPTY = "Får inte vara tomt, försök igen";
-    public static final String TITLEERROR = "Error";
-    public static final String NAMENOTHERE  = "Namnet finns inte på hotellet, försök igen!";
+    //Text i rutorna
+    private static final String WHICHPLANT = "Vilken växt ska vattnas?";
+    private static final String PROGRAMCLOSE = "Programmet stängs";
+    private static final String EMPTY = "Får inte vara tomt, försök igen";
+    private static final String NAMENOTHERE  = "Namnet finns inte på hotellet, försök igen!";
 
-    public static void messageOutput(String message) {
-        showMessageDialog(null, message, "Avslutas", JOptionPane.INFORMATION_MESSAGE);
+    //Titlar på rutorna
+    private static final String TITLEINPUT = "VÄXTHOTELLET";
+    private static final String TITLEERROR = "Error";
+    private static final String TITLECLOSE = "Avslutas";
+
+    //Stänger program
+    protected static void messageClose() {
+        showMessageDialog(null, Help_Class.PROGRAMCLOSE,TITLECLOSE , JOptionPane.INFORMATION_MESSAGE);
     }
 
-    public static void errorOutput(String message) {
-        showMessageDialog(null, message, TITLEERROR,JOptionPane.WARNING_MESSAGE);
+    //Utskrift
+    private static void messageOutput(String message) {
+        showMessageDialog(null, message, TITLEINPUT, JOptionPane.INFORMATION_MESSAGE);
     }
 
-    public static void continueOrNot() {
-        JOptionPane.showConfirmDialog(
-                null, "Vill du fortsätta till nästa växt?",
-                "Nästa?", JOptionPane.YES_NO_OPTION);
+    // Om tomt
+    private static void errorOutput() {
+        showMessageDialog(null, EMPTY, TITLEERROR,JOptionPane.WARNING_MESSAGE);
     }
 
-    public static void userInput(List<Plant> plants) {
+    protected static void userInput(List<Plant> plants) {
 
         while (true) {
 
@@ -38,12 +49,12 @@ public class Help_Class {
                     JOptionPane.QUESTION_MESSAGE);
 
             if (input == null ) {
-                messageOutput (PROGRAMCLOSE);
+                messageClose ();
                 return;
             }
 
             if (input.isEmpty()){
-                errorOutput (EMPTY);
+                errorOutput ();
                 continue;
             }
 
@@ -58,6 +69,4 @@ public class Help_Class {
             messageOutput(NAMENOTHERE);
         }
     }
-
-
 }
