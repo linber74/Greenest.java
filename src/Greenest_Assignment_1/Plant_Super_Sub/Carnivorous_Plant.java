@@ -10,10 +10,6 @@ public class Carnivorous_Plant extends Plant {
         super(plantType, plantName, heightOfPlant);
     }
 
-    public Liquid_Type getLiquid_Type() {
-        return liquid_Type;
-    }
-
     @Override
     public double calculateLiquid(double literPerDay) {
         double liquidProtein = 0.2;

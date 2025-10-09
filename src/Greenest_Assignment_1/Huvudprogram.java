@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Huvudprogram {
 
-    public Huvudprogram() {
+    public static void main (String[] args) {
 
         List<Plant> plants = new ArrayList<>();
 
@@ -25,12 +25,8 @@ public class Huvudprogram {
         plants.add(meatloaf);
         plants.add(olof);
 
-        String input = Help_Class.userInput(plants);
+        Help_Class.userInput(plants);
 
-
-    }
-
-    public static void main(String[] args){
-        Huvudprogram huvudprogram = new Huvudprogram();
+        Help_Class.continueOrNot();
     }
 }
