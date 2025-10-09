@@ -12,24 +12,29 @@ import java.util.List;
 public class Huvudprogram {
 
     public Huvudprogram() {
+
+        List<Plant> plants = new ArrayList<>();
+
         Cactus igge = new Cactus("Kaktus", "Igge", 0.20);
         Palm laura = new Palm("Palm", "Laura", 5);
         Carnivorous_Plant meatloaf = new Carnivorous_Plant("Köttätande växt", "Meatloaf", 0.7);
         Palm olof =  new Palm("Palm", "Olof", 1);
 
-        List<Plant> plants = new ArrayList<>();
+
         plants.add(igge);
         plants.add(laura);
         plants.add(meatloaf);
         plants.add(olof);
 
-        String input = Dialog_Boxes.userInput(Plant.plantName);
+        String input = Dialog_Boxes.userInput(plants);
 
-            if (input.equalsIgnoreCase("igge")) {
-            } else if (input.equalsIgnoreCase("laura")) {
-            } else if (input.equalsIgnoreCase("meatloaf")) {
-            } else if (input.equalsIgnoreCase("olof")) {
-            } else {}
+
+
+//            if (input.equalsIgnoreCase("igge")) {
+//            } else if (input.equalsIgnoreCase("laura")) {
+//            } else if (input.equalsIgnoreCase("meatloaf")) {
+//            } else if (input.equalsIgnoreCase("olof")) {
+//            } else {}
 
     }
 
