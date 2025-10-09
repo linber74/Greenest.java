@@ -1,4 +1,6 @@
-package Greenest_Assignment_1;
+package Greenest_Assignment_1.Plant_Super_Sub;
+
+import Greenest_Assignment_1.Liquid_Type;
 
 public class Cactus extends Plant {
 

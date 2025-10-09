@@ -1,6 +1,8 @@
-package Greenest_Assignment_1;
+package Greenest_Assignment_1.Plant_Super_Sub;
 
-public class Palm extends Plant  {
+import Greenest_Assignment_1.Liquid_Type;
+
+public class Palm extends Plant {
 
     private final Liquid_Type liquid_Type = Liquid_Type.TAPWATER;
 

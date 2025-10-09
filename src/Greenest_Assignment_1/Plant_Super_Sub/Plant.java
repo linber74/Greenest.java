@@ -1,4 +1,6 @@
-package Greenest_Assignment_1;
+package Greenest_Assignment_1.Plant_Super_Sub;
+
+import Greenest_Assignment_1.Fluid_requirements;
 
 public abstract class Plant implements Fluid_requirements {
 
