@@ -23,10 +23,18 @@ public class Huvudprogram {
         plants.add(meatloaf);
         plants.add(olof);
 
+        String input = Dialog_Boxes.userInput(Plant.plantName);
+
+            if (input.equalsIgnoreCase("igge")) {
+            } else if (input.equalsIgnoreCase("laura")) {
+            } else if (input.equalsIgnoreCase("meatloaf")) {
+            } else if (input.equalsIgnoreCase("olof")) {
+            } else {}
 
     }
 
     public static void main(String args[]){
+        Huvudprogram huvudprogram = new Huvudprogram();
 
     }
 }
