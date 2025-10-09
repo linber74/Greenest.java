@@ -3,6 +3,7 @@ package Greenest_Assignment_1;
 import javax.swing.*;
 
 public class Dialog_Boxes {
+
     public static String userInput(String message) {
         while (true) {
             String userInput = JOptionPane.showInputDialog(message);
@@ -18,7 +19,13 @@ public class Dialog_Boxes {
         }
     }
 
-    public static void messageOutput (String message) {
+    public static void messageOutput(String message) {
         JOptionPane.showMessageDialog(null, message);
+    }
+
+    public static int continueOrNot(String[] options) {
+        return JOptionPane.showConfirmDialog (
+                null, "Vill du fortsätta till nästa växt?",
+                "Nästa?", JOptionPane.YES_NO_OPTION);
     }
 }
