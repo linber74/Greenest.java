@@ -30,7 +30,7 @@ public class Huvudprogram {
 
     }
 
-    public static void main(String args[]){
+    public static void main(String[] args){
         Huvudprogram huvudprogram = new Huvudprogram();
     }
 }

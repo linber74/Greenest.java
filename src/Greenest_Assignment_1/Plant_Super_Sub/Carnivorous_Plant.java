@@ -16,15 +16,16 @@ public class Carnivorous_Plant extends Plant {
 
     @Override
     public double calculateLiquid(double literPerDay) {
-        double LIQUIDPRO = 0.5;
-        literPerDay = LIQUIDPRO * getHeightOfPlant();
+        double liquidProtein = 0.2;
+        double liter = 0.1;
+        literPerDay = liter + (liquidProtein * getHeightOfPlant());
         return literPerDay;
     }
 
     @Override
     public String toString(){
         return "Köttätande växten " + getPlantName() +
-                " behöver: " + liquid_Type +
-                calculateLiquid(getHeightOfPlant()) + " l/dag";
+                " behöver: " + calculateLiquid(getHeightOfPlant()) +
+                " liter " + liquid_Type.drink + " per dag";
     }
 }

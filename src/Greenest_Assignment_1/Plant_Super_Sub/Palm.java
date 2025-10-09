@@ -10,21 +10,16 @@ public class Palm extends Plant {
         super(plantType, plantName, heightOfPlant);
     }
 
-    public Liquid_Type getLiquid_Type() {
-        return liquid_Type;
-    }
-
-
     @Override
     public double calculateLiquid(double literPerDay) {
-        double LIQUIDTAP = 0.5;
-        literPerDay = LIQUIDTAP * getHeightOfPlant();
+        double liquidTap = 0.5;
+        literPerDay = liquidTap * getHeightOfPlant();
        return literPerDay;
     }
     @Override
     public String toString(){
         return "Palmen " + getPlantName() +
-                " behöver: " + liquid_Type +
-                calculateLiquid(getHeightOfPlant()) + " l/dag";
+                " behöver: " + calculateLiquid(getHeightOfPlant()) +
+                 " liter " + liquid_Type.drink + " per dag";
     }
 }
