@@ -6,8 +6,8 @@ public class Palm extends Plant {
 
     private final Liquid_Type liquid_Type = Liquid_Type.TAPWATER;
 
-    public Palm(String plantName, int heightOfPlant) {
-        super(plantName, heightOfPlant);
+    public Palm (String plantType, String plantName, int heightOfPlant) {
+        super(plantType, plantName, heightOfPlant);
     }
 
     public Liquid_Type getLiquid_Type() {

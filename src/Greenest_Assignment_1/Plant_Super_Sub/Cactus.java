@@ -6,10 +6,9 @@ public class Cactus extends Plant {
 
     private final Liquid_Type liquid_Type = Liquid_Type.MINERALWATER;
 
-    public Cactus(String plantName, int heightOfPlant) {
-        super(plantName, heightOfPlant);
+    public Cactus(String plantType, String plantName, int heightOfPlant) {
+        super(plantType, plantName, heightOfPlant);
     }
-
 
     public Liquid_Type getLiquid_Type() {
         return liquid_Type;
