@@ -6,7 +6,7 @@ public class Carnivorous_Plant extends Plant {
 
     private final Liquid_Type liquid_Type = Liquid_Type.PROTEINDRINK;
 
-    public Carnivorous_Plant (String plantType, String plantName, int heightOfPlant) {
+    public Carnivorous_Plant (String plantType, String plantName, double heightOfPlant) {
         super(plantType, plantName, heightOfPlant);
     }
 

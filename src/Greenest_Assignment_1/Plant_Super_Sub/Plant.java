@@ -9,7 +9,7 @@ public abstract class Plant implements Fluid_requirements {
     private double heightOfPlant;
 
 
-    public Plant(String plantType, String plantName, int heightOfPlant) {
+    public Plant(String plantType, String plantName, double heightOfPlant) {
 //        if (plantName == null || plantName.trim().isEmpty()) {
 //            System.out.println("Försök igen!");
 //        }
