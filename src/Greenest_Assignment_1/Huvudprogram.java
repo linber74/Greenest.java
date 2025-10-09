@@ -20,28 +20,17 @@ public class Huvudprogram {
         Carnivorous_Plant meatloaf = new Carnivorous_Plant("Köttätande växten", "Meatloaf", 0.7);
         Palm olof =  new Palm("Palmen", "Olof", 1);
 
-
         plants.add(igge);
         plants.add(laura);
         plants.add(meatloaf);
         plants.add(olof);
 
-        String input = Dialog_Boxes.userInput(plants);
+        String input = Help_Class.userInput(plants);
 
-
-
-
-
-//            if (input.equalsIgnoreCase("igge")) {
-//            } else if (input.equalsIgnoreCase("laura")) {
-//            } else if (input.equalsIgnoreCase("meatloaf")) {
-//            } else if (input.equalsIgnoreCase("olof")) {
-//            } else {}
 
     }
 
     public static void main(String args[]){
         Huvudprogram huvudprogram = new Huvudprogram();
-
     }
 }

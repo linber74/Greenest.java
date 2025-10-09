@@ -23,21 +23,8 @@ public abstract class Plant implements Fluid_requirements {
         return plantName;
     }
 
-//    public void setPlantName(String plantName) {
-//        this.plantName = plantName;
-//    }
-
     public double getHeightOfPlant() {
         return heightOfPlant;
-    }
-
-//    public void setHeightOfPlant(int heightOfPlant) {
-//        this.heightOfPlant = heightOfPlant;
-//    }
-
-    @Override
-    public double calculateLiquid(double literPerDay) {
-        return literPerDay;
     }
 
     @Override
