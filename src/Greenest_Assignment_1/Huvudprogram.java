@@ -28,8 +28,5 @@ public class Huvudprogram {
 
         //Kallar metoden userInput i Help_Class
         Help_Class.userInput(plants);
-
-        //Meddelar att program avslutas
-        Help_Class.messageClose();
     }
 }

@@ -52,21 +52,25 @@ public class Help_Class {
                 messageClose ();
                 return;
             }
-
+            input = input.trim();
             if (input.isEmpty()){
                 errorOutput ();
                 continue;
             }
+
+            boolean plantFound = false;
 
             for (Plant plant : plants) {
                 String name = plant.getPlantName();
                 String plantType = plant.getPlantType();
                 if (name.equalsIgnoreCase(input) || (plantType + " " + name).equalsIgnoreCase(input)) {
                     messageOutput(plant.toString());
-                    return;
+                    break;
                 }
             }
-            messageOutput(NAMENOTHERE);
+            if (!plantFound) {
+                messageOutput(NAMENOTHERE);
+            }
         }
     }
 }
