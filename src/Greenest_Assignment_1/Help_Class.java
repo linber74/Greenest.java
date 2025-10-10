@@ -65,6 +65,7 @@ public class Help_Class {
                 String plantType = plant.getPlantType();
                 if (name.equalsIgnoreCase(input) || (plantType + " " + name).equalsIgnoreCase(input)) {
                     messageOutput(plant.toString());
+                    plantFound = true;
                     break;
                 }
             }
